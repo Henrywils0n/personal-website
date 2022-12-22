@@ -1,0 +1,197 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --font-family: 'Manrope', sans-serif;
+  
+    --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+    --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+    --side-shadow : rgba(136, 153, 166, 0.2) 0px 0px 15px, rgba(136, 153, 166, 0.15) 0px 0px 3px 1px;
+    --color-bg: hsl(216, 71%, 5%);
+    --color-footer : hsl(211, 89%, 11%);
+    --color-blog: hsl(210, 91%, 17%);
+    --color-text: #81AFDD;
+    --color-subtext: #FF8A71;
+    --color-neutral : hsl(207 ,  19%   , 9%);
+    --color-acdent : hsl(142 ,  90%   , 61%);
+    --color-white : hsl(0 , 0% , 100%);
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url('/font/Vazir-Regular.eot');
+    src: url('/font/Vazir-Regular.eot?#iefix') format('embedded-opentype'),
+         url('/font/Vazir-Regular.woff2') format('woff2'),
+         url('/font/Vazir-Regular.woff') format('woff'),
+         url('/font/Vazir-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url('/font/Vazir-Bold.eot');
+    src: url('/font/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
+         url('/font/Vazir-Bold.woff2') format('woff2'),
+         url('/font/Vazir-Bold.woff') format('woff'),
+         url('/font/Vazir-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url('/font/Vazir-Black.eot');
+    src: url('/font/Vazir-Black.eot?#iefix') format('embedded-opentype'),
+         url('/font/Vazir-Black.woff2') format('woff2'),
+         url('/font/Vazir-Black.woff') format('woff'),
+         url('/font/Vazir-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url('/font/Vazir-Medium.eot');
+    src: url('/font/Vazir-Medium.eot?#iefix') format('embedded-opentype'),
+         url('/font/Vazir-Medium.woff2') format('woff2'),
+         url('/font/Vazir-Medium.woff') format('woff'),
+         url('/font/Vazir-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url('/font/Vazir-Light.eot');
+    src: url('/font/Vazir-Light.eot?#iefix') format('embedded-opentype'),
+         url('/font/Vazir-Light.woff2') format('woff2'),
+         url('/font/Vazir-Light.woff') format('woff'),
+         url('/font/Vazir-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url('/font/Vazir-Thin.eot');
+    src: url('/font/Vazir-Thin.eot?#iefix') format('embedded-opentype'),
+         url('/font/Vazir-Thin.woff2') format('woff2'),
+         url('/font/Vazir-Thin.woff') format('woff'),
+         url('/font/Vazir-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+.dy-nav {
+    box-sizing: border-box !important;
+    background-color: hsl(217 11% 15% / .99);
+    box-shadow: rgb(0 0 0 / 1%) 0px 0px 1px, rgb(0 0 0 / 4%) 0px 4px 8px, rgb(0 0 0 / 4%) 0px 16px 24px, rgb(0 0 0 / 1%) 0px 24px 32px;
+
+}
+
+.backgournd_image {
+    background-image: url(/mainEffect.svg);
+    opacity : .3 ;
+    pointer-events: none;
+}
+
+.backgournd_shadow {
+    box-shadow: rgb(0 0 0 / 1%) 0px 0px 1px, rgb(0 0 0 / 4%) 0px 4px 8px, rgb(0 0 0 / 4%) 0px 16px 24px, rgb(0 0 0 / 1%) 0px 24px 32px;
+}
+
+.gradient__bg {
+    background: hsl(0 0% 50% / 0.1);
+ 
+}
+@supports(backdrop-filter: blur(1rem)){
+    .gradient__bg {
+        background: hsl(0 0% 100% /0.1);
+        backdrop-filter: blur(1rem);
+    }
+}
+.router-link-active ,
+.router-link-exact-active ,
+.router-link-active svg ,
+.router-link-active svg path 
+{
+    color: #fff !important;
+    fill :  #fff  !important ;
+}
+.router-link-active svg.stroke ,
+.router-link-active svg.stroke path {
+    stroke: #fff !important;
+    fill : none !important ;
+}
+
+  
+.gradient__text {
+    background: var(--gradient-text);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar_menu-toggle{
+    
+    min-width: 196px;
+    max-height: 350px;
+    overflow: auto;
+    background-color: #22252a;
+    /* box-shadow: rgb(0 0 0 / 1%) 0px 0px 1px, rgb(0 0 0 / 4%) 0px 4px 8px, rgb(0 0 0 / 4%) 0px 16px 24px, rgb(0 0 0 / 1%) 0px 24px 32px; */
+    box-shadow: var(--side-shadow);
+    border: 1px solid rgb(25, 27, 31);
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    position: absolute;
+    top:6.5rem;
+    z-index: 100;
+    right: 1rem;
+}
+
+.cv-card .card-content {
+    --padding : 1.5rem; 
+    color : var(--color-white );
+    padding: var(--padding);
+    background :  linear-gradient(
+        hsl(0 0% 0% /0) ,
+        hsl(20 0% 0% / .3) 20% ,
+        hsl(0 0% 0% /1)
+    );
+    transition: transform .3s ease;
+}
+
+.cv-card .card-content .title::after {
+    content : "" ;
+    position: absolute;
+    height : 4px; 
+    bottom: -3px ;
+    right : calc(var(--padding) * -1);
+    width : 100% ;
+    background: var(--color-acdent);
+    border-radius: 20px;
+    transition: transform .3s ease;
+    transform-origin: right;
+}
+
+
+
+@media(hover){
+    .cv-card .card-content {
+        transform: translateY(25%);
+    }
+    .cv-card:hover .card-content ,
+    .cv-card:focus-within .card-content {
+        transform : translateY(0);
+    }
+    .cv-card .card-content .title::after {
+        transform: scaleX(0);
+    }
+    .cv-card:hover .title::after,
+    .cv-card:focus-within .title::after {
+        transform: scaleX(1);
+    }
+}
