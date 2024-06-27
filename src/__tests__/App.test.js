@@ -41,7 +41,7 @@ describe('renders the app', () => {
   });
 
   it('should render the title', async () => {
-    expect(document.title).toBe("Michael D'Angelo");
+    expect(document.title).toBe('Henry Wilson');
   });
 
   it('can navigate to /about', async () => {
@@ -88,7 +88,7 @@ describe('renders the app', () => {
     await act(async () => {
       await contactLink.click();
     });
-    expect(document.title).toContain('Stats |');
+    expect(document.title).toContain('Facts |');
     expect(window.location.pathname).toBe('/stats');
     expect(global.fetch).toHaveBeenCalledTimes(1);
     expect(jsonMock).toHaveBeenCalledTimes(1);
