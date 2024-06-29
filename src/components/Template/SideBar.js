@@ -20,8 +20,8 @@ const SideBar = () => (
     <section className="blurb">
       <h2>About</h2>
       <p>Hi, I&apos;m Henry. I am a graduate of <a href="https://www.queensu.ca/mathstat/sites/mastwww/files/uploaded_files/undergraduate/mthe/MathematicsEngineering-Brochure.pdf">Queen&apos;s University&apos;s Applied Mathematics and Engineering </a>
-        program. I am looking to work as a programmer,
-        with a skillset in mathematical modelling and Artificial intelligence.
+        program. This website encapsulates my journey as a programmer.
+        Feel free to look around and reach out to me if you have any questions.
       </p>
       <ul className="actions">
         <li>
