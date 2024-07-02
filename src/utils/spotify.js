@@ -14,7 +14,6 @@ async function getAccessToken() {
     },
   });
   const data = await response.json();
-  console.log(data);
   return data.access_token;
 }
 
@@ -51,4 +50,4 @@ async function getTrackInfoFromPlaylist(playlistId, clientId = '55eab5d239d44c13
   }
 }
 
-export { getAccessToken, getPlaylist };
+export { getTrackInfoFromPlaylist };

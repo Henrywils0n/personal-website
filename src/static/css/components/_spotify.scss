@@ -1,0 +1,190 @@
+///
+/// Future Imperfect by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Post */
+
+	.spotify {
+		@include padding(_size(section-spacing), _size(section-spacing));
+		background: #fafafa;
+		border: solid 2px green;
+		margin: 0 10px 0 10px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		border-radius: 3px;
+		justify-content: center;
+
+		> header {
+			@include vendor('display', 'flex');
+			border-bottom: solid 1px green;
+			justify-content: center;
+			flex: 1 0 auto; /* Take up all available width */
+      		max-width: 100%; /* Ensure it does not exceed parent width */
+      		text-align: center;
+			margin: 10px 0 10px 0;
+			width: 100%;
+
+			.title {
+				@include vendor('flex-grow', '1');
+				-ms-flex: 1;
+				padding: (_size(section-spacing) * 1.25) _size(section-spacing) (_size(section-spacing) * 1.1) _size(section-spacing);
+
+				h2 {
+					font-weight: _font(weight-heading-extrabold);
+					font-size: 1.5em;
+				}
+
+				> :last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.activities {
+			display: flex; /* Nested flex container */
+      		width: 100%; /* Take full width of parent container */
+		}
+
+		.recommender {
+			display: flex;
+			width: 50%;
+			padding: 30px;
+			margin: 5px;
+			border: solid 1px green;
+			border-radius: 3px;/* Example margin for spacing between components */
+			text-align: center;
+			justify-content: center;
+		}
+
+		.blurb {
+			margin: 10px 0 15px 0
+		}
+
+
+
+		@include breakpoint(medium) {
+			border-left: 0;
+			border-right: 0;
+			left: _size(section-spacing) * -1;
+			width: calc(100% + (#{_size(section-spacing)} * 2));
+
+			> header {
+				@include vendor('flex-direction', 'column');
+				@include padding(_size(section-spacing) * 1.25, _size(section-spacing), (0, 0, -0.5em, 0));
+				border-left: 0;
+
+				.title {
+					-ms-flex: 0 1 auto;
+					margin: 0 0 _size(element-margin) 0;
+					padding: 0;
+					text-align: center;
+				}
+
+				.meta {
+					@include vendor('align-items', 'center');
+					@include vendor('display', 'flex');
+					@include vendor('justify-content', 'center');
+					border-left: 0;
+					margin: 0 0 _size(element-margin) 0;
+					padding-top: 0;
+					padding: 0;
+					text-align: left;
+					width: 100%;
+
+					> * {
+						border-left: solid 1px _palette(border);
+						margin-left: 2em;
+						padding-left: 2em;
+					}
+
+					> :first-child {
+						border-left: 0;
+						margin-left: 0;
+						padding-left: 0;
+					}
+
+					.published {
+						margin-bottom: 0;
+						margin-top: 0;
+					}
+
+					.author {
+						@include vendor('flex-direction', 'row-reverse');
+						margin-bottom: 0;
+
+						.name {
+							margin: 0 0 0 1.5em;
+						}
+
+						img {
+							width: 3.5em;
+						}
+					}
+				}
+			}
+		}
+
+		@include breakpoint(small) {
+			@include padding(_size(section-spacing-small), _size(section-spacing-small));
+			left: _size(section-spacing-small) * -1;
+			margin: 0 0 _size(element-margin) 0;
+			width: calc(100% + (#{_size(section-spacing-small)} * 2));
+
+			> header {
+				@include padding(_size(section-spacing-small) * 2, _size(section-spacing-small), (0, 0, -0.5em, 0));
+				left: (_size(section-spacing-small) * -1);
+				margin: (_size(section-spacing-small) * -1) 0 _size(section-spacing-small) 0;
+				width: calc(100% + #{_size(section-spacing-small) * 2});
+
+				.title {
+					h2 {
+						font-size: 1.1em;
+					}
+				}
+			}
+		}
+
+		@include breakpoint(xsmall) {
+			> header {
+				.meta {
+					@include vendor('align-items', 'center');
+					@include vendor('flex-direction', 'column');
+
+					> * {
+						border-left: 0;
+						margin: (_size(element-margin) * 0.5) 0 0 0;
+						padding-left: 0;
+					}
+
+					.author {
+						.name {
+							display: none;
+						}
+					}
+				}
+			}
+
+			> .image.featured {
+				margin-left: _size(section-spacing-small) * -1;
+				margin-top: calc(#{_size(section-spacing-small) * -1} - 1px);
+				width: calc(100% + #{_size(section-spacing-small) * 2});
+			}
+
+			> footer {
+				@include vendor('align-items', 'stretch');
+				@include vendor('flex-direction', 'column-reverse');
+
+				.stats {
+					text-align: center;
+
+					li {
+						margin: 0 0 0 1.25em;
+						padding: 0 0 0 1.25em;
+					}
+				}
+			}
+		}
+	}
