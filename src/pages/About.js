@@ -5,13 +5,14 @@ import Main from '../layouts/Main';
 import Personal from '../components/Stats/Personal';
 import { getTrackInfoFromPlaylist } from '../utils/spotify';
 
+const { PUBLIC_URL } = process.env;
+
 const About = () => {
   const [markdown, setMarkdown] = useState('');
   const [playlist, setPlaylist] = useState(null);
   const [randomTrack, setRandomTrack] = useState(null);
-  const [chosenPlaylist, setChosenPlaylist] = useState(null);
+  const [selectPlaylist, setSelectPlaylist] = useState(null);
   const [selectTrack, setSelectTrack] = useState(null);
-  const [selectedGenre, setSelectedGenre] = useState('');
 
   const playlistMap = {
     rock: '2aBBzw32kfI6FuayPhJqO4',
@@ -20,6 +21,16 @@ const About = () => {
     punkPop: '4zbk9OFoT9PfmidYDA7mcu',
     yachtRock: '1XzcWLbmd12wV6Q6c4zaE8',
     edm: '1AXE9XeKp1wExSGVqhztwm',
+  };
+
+  const handleRandomTrack = () => {
+    const randomIndex = Math.floor(Math.random() * playlist.length);
+    setRandomTrack(playlist[randomIndex]);
+  };
+
+  const handleSelectTrack = () => {
+    const randomIndex = Math.floor(Math.random() * selectPlaylist.length);
+    setSelectTrack(selectPlaylist[randomIndex]);
   };
 
   useEffect(() => {
@@ -35,29 +46,21 @@ const About = () => {
     }).catch((error) => console.error('Error fetching playlist:', error));
   }, []);
 
+  useEffect(() => {
+    if (selectPlaylist && selectPlaylist.length > 0) {
+      handleSelectTrack();
+    }
+  }, [selectPlaylist]);
+
   const count = markdown.split(/\s+/)
     .map((s) => s.replace(/\W/g, ''))
     .filter((s) => s.length).length;
 
-  const handleRandomTrack = () => {
-    const randomIndex = Math.floor(Math.random() * playlist.length);
-    setRandomTrack(playlist[randomIndex]);
-  };
-
-  const handleSelectTrack = () => {
-    const randomIndex = Math.floor(Math.random() * playlist.length);
-    setSelectTrack(chosenPlaylist[randomIndex]);
-  };
-
   const handleGenreChange = async (e) => {
-    setSelectedGenre(e.target.value);
     try {
-      getTrackInfoFromPlaylist(playlistMap[selectedGenre]).then((data) => {
-        setChosenPlaylist(data);
+      getTrackInfoFromPlaylist(playlistMap[e.target.value]).then((data) => {
+        setSelectPlaylist(data);
       }).catch((error) => console.error('Error fetching playlist:', error));
-
-      const randomIndex = Math.floor(Math.random() * chosenPlaylist.length);
-      setSelectTrack(chosenPlaylist[randomIndex]);
     } catch (error) {
       console.error('Error fetching genre playlist:', error);
     }
@@ -90,8 +93,10 @@ const About = () => {
           <article className="spotify">
             <header>
               <h2> Get to know my music </h2>
+              <a href="https://open.spotify.com/user/lwirz0qqyyh2kwexvuj9prhxa" target="_blank" rel="noopener noreferrer">
+                <img className="spotify-logo" src={`${PUBLIC_URL}/images/spotify.png`} alt="Spotify Logo" />
+              </a>
             </header>
-            {/* eslint-disable-next-line max-len */}
             <p className="blurb">
               I have always loved music.
               In fact, as a kid I played the drums and have since been trying to learn the guitar.
@@ -120,15 +125,17 @@ const About = () => {
                   <div>
                     <img src={selectTrack.albumCover} alt={selectTrack.name} width="110" />
                     <p className="blurb">{selectTrack.name}<br />{selectTrack.artist}<br />Popularity: {selectTrack.popularity}</p>
-                    <button type="button" onClick={handleSelectTrack}>Another Song!</button>
-                    <button type="button" onClick={() => setSelectTrack(null)}>Choose Another Genre</button>
+                    <div className="activities">
+                      <button className="side-button" type="button" onClick={handleSelectTrack}>Another Song!</button>
+                      <button className="side-button" type="button" onClick={() => setSelectTrack(null)}>Choose Another Genre</button>
+                    </div>
                   </div>
                 ) : (
                   <div>
                     <h2> Select a Genre </h2>
                     <p className="blurb">If you have a more particular taste, let us narrow it down.</p>
                     {/* eslint-disable-next-line max-len */}
-                    <select onChange={(e) => handleGenreChange(e)} value={selectedGenre}>
+                    <select defaultValue={null} onChange={(e) => handleGenreChange(e)}>
                       <option value="">Select a genre</option>
                       {Object.keys(playlistMap).map((genre) => (
                         <option key={genre} value={genre}>{genre}</option>

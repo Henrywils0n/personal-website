@@ -17,6 +17,14 @@
 		border-radius: 3px;
 		justify-content: center;
 
+		.spotify-logo {
+			position: absolute;
+			top: 10px; // Adjust as needed
+			right: 10px; // Adjust as needed
+			width: 60px; // Adjust size as needed
+			height: auto; // Maintain aspect ratio
+  		}
+
 		> header {
 			@include vendor('display', 'flex');
 			border-bottom: solid 1px green;
@@ -44,8 +52,22 @@
 		}
 
 		.activities {
-			display: flex; /* Nested flex container */
-      		width: 100%; /* Take full width of parent container */
+			display: flex;
+		    justify-content: space-between; // Adjusts spacing between buttons
+		    align-items: center; // Vertically centers the buttons
+		    margin-top: 10px;
+		    width: 100%;
+
+			.side-button {
+				flex: 1; // Each button takes equal space
+				margin: 0 5px;
+				padding: 4px;
+				cursor: pointer;
+				transition: background-color 0.3s;
+				display: flex; // Makes the button a flex container
+				align-items: center; // Vertically centers the text
+			}
+
 		}
 
 		.recommender {
