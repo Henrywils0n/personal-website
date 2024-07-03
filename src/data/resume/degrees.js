@@ -1,15 +1,16 @@
 const degrees = [
   {
-    school: 'Stanford University',
-    degree: 'M.S. Computational and Mathematical Engineering',
-    link: 'https://stanford.edu',
-    year: 2016,
+    school: 'Queen\'s University',
+    degree: 'B.A.Sc Computational and Mathematical Engineering',
+    link: 'https://smithengineering.queensu.ca/',
+    year: 2024,
+    gpa: 4.21,
   },
   {
-    school: 'University at Buffalo',
-    degree: 'B.S. Electrical Engineering, Computer Engineering',
-    link: 'https://buffalo.edu',
-    year: 2012,
+    school: 'Dartmouth College Tuck School of Business',
+    degree: 'Business Bridge Program',
+    link: 'https://bridge.tuck.dartmouth.edu/',
+    year: 2023,
   },
 ];
 

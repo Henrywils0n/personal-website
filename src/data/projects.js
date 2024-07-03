@@ -1,47 +1,42 @@
 // TODO Add a couple lines about each project
 const data = [
   {
-    title: 'Nearest Dollar',
-    subtitle: '2015 BVP Hackathon',
-    image: '/images/projects/nearestdollar.jpg',
-    date: '2015-11-20',
+    title: 'Quant GAN',
+    subtitle: 'Queens University Capstone Project',
+    link: 'https://github.com/Henrywils0n/QuantGAN',
+    image: '/images/projects/quantgan.png',
+    date: '2024-04-01',
     desc:
-      'Built for a social impact hackathon. '
-      + 'NearestDollar connected to your bank accounts, credit cards, '
-      + 'or debit cards and rounded up your purchases to donate the balance to '
-      + 'the charity of your choice.',
+      'Generative Adversarial Network to generate statistically accurate financial data.'
+      + ' Outperforms classical methods of timeseries prediction including GARCH and ARIMA models.'
+      + ' Still need to try and make money with it :(',
   },
   {
-    title: 'Harvest',
-    subtitle: 'Won 3rd. place in 2015 Techcrunch Disrupt SF Hackathon',
-    link: 'https://devpost.com/software/harvest',
-    image: '/images/projects/harvest.jpg',
-    date: '2015-09-20',
+    title: 'This website :)',
+    subtitle: 'Just a fun little project',
+    link: 'https://github.com/Henrywils0n/personal-website',
+    image: '/images/projects/react.png',
+    date: '2024-07-03',
     desc:
-      'Won ~ $7000 in prizes for an advanced, low cost monitoring solution '
-      + 'for crops. Harvest was designed to catch irrigation leaks, overwatering, '
-      + 'and nutrient deficiencies at an affordable price for the developing world.',
+      'Nothing cool. Just a website. But hey, click the title to see the code behind it',
   },
   {
-    title: 'Space Potato',
-    subtitle: 'A kickstarter funded potato powered weather balloon.',
-    link: 'http://www.spacepotato.org',
-    image: '/images/projects/spacepotato.jpg',
-    date: '2015-06-28',
+    title: 'TPa on Twitter',
+    subtitle: 'Some work I did for the HCOAL lab while with QMIND',
+    link: 'https://www.h-coal.com/',
+    image: '/images/projects/tpa.png',
+    date: '2023-07-01',
     desc:
-      'Launched a potato battery powered weather balloon with two cameras '
-      + 'and gps transponder. Resulting photos were published in a coffee table book. '
-      + 'You can email me for a copy.',
+      'Webscraping Twitter in search for tweets to analyze with a RNN for sentiment analysis. Pulled thousands of tweets relating to TPa (a divisive stroke treatment) to generalize public sentiment and study its effect on usage in the ER. ',
   },
   {
-    title: 'Cat Detector',
-    subtitle: 'A convolutional neural network to classify cats! (and dogs)',
-    image: '/images/projects/catdetector.jpg',
-    date: '2015-05-15',
+    title: 'YUL Security Placement',
+    subtitle: 'Lloyd\'s Algorithm to dynamically place security officers in YUL departures terminal',
+    link: 'https://github.com/Henrywils0n/Airport-Security-Placement-with-Lloyds-Algorithm',
+    image: '/images/projects/lloyds.png',
+    date: '2022-08-01',
     desc:
-      'Trained a convolutional neural network to classify between ~ 80 cats breeds. '
-      + 'Over 60,000 cats were classified before server bills made the project too expensive '
-      + 'to continue hosting.',
+      'Programmed a simulation of Lloyd\'s algorithm where the density map would dynamically update based on the arrival and departure of planes from the terminal',
   },
 ];
 

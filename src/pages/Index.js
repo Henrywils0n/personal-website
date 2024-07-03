@@ -29,6 +29,7 @@ const Index = () => (
             Hi, I&apos;m Henry. I am a graduate of <a href="https://www.queensu.ca/mathstat/sites/mastwww/files/uploaded_files/undergraduate/mthe/MathematicsEngineering-Brochure.pdf">Queen&apos;s University&apos;s Applied Mathematics and Engineering </a>
             program. This website encapsulates my journey as a programmer.
             Feel free to look around and reach out to me if you have any questions.
+            It&apos;s a work in progress so go easy on it...
           </p>
           {!window.location.pathname.includes('/about') ? <Link to="/about" className="button">Learn More</Link> : null}
         </div>
