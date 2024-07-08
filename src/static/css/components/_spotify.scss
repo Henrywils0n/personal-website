@@ -53,13 +53,15 @@
 
 		.activities {
 			display: flex;
-		    justify-content: center; // Adjusts spacing between buttons
-			align-items: center;// Vertically centers the buttons
-		    margin-top: 10px;
-		    width: 100%;
+			justify-content: center;
+			justify-items: center;
+			align-items: stretch;
+			margin-top: 10px;
+			width: 100%;
 
 			@include breakpoint(small) {
 				flex-direction: column;
+				align-items: center;
 			}
 
 
@@ -76,17 +78,17 @@
 		}
 
 		.recommender {
-			flex: 1;
-			width: 50%;
-			padding: 30px;
-			margin: 5px;
-			border: solid 1px green;
-			border-radius: 3px;/* Example margin for spacing between components */
-			text-align: center;
+		  flex: 1;
+		  width: 50%;
+		  padding: 30px;
+		  margin: 5px;
+		  border: solid 1px green;
+		  border-radius: 3px;
+		  text-align: center;
 
-			@include breakpoint(small) {
-				width: 80%;
-			}
+		  @include breakpoint(small) {
+			width: 80%;
+		  }
 		}
 
 		.blurb {
