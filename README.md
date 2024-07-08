@@ -1,6 +1,6 @@
 # Personal Website
 
-Welcome to my [personal website](https://henrywilson.surge.sh)! This is an [MIT licensed](https://github.com/henrywilson/personal-site/blob/main/LICENSE) React application hosted via static builds using surge.sh.
+Welcome to my [personal website](https://henrywilson.surge.sh)! This is an [MIT licensed](https://github.com/henrywilson/personal-website/blob/main/LICENSE) React application hosted via static builds using surge.sh.
 ## 🚀 Features
 
 - Built with modern JavaScript, using tools and frameworks like [create-react-app](https://github.com/facebook/create-react-app), [React-Router](https://reactrouter.com/), and SCSS.
@@ -14,7 +14,7 @@ Welcome to my [personal website](https://henrywilson.surge.sh)! This is an [MIT 
 1. Clone the repository:
 
     ```bash
-    git clone git://github.com/henrywilson/personal-site.git
+    git clone git://github.com/henrywilson/personal-website.git
     cd personal-site
     ```
 
@@ -74,10 +74,6 @@ This will generate a static version in `personal-site/build/` which you can host
 After making a commit to `main`, simply push your changes, and the deployment will be handled automatically.
 
 
-
-
-
-    
 
 ## 🙌 Acknowledgements
 
