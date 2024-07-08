@@ -15,7 +15,7 @@ This page is a work in progress and I will continue to add, but below, you will 
 - the Steelers
 - Sailing and the sea
 - Mountain biking
-- Music (rock preferably)
+- Music
 - the gym
 - Math
 - Seeing new places

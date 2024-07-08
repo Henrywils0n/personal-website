@@ -4,7 +4,7 @@ import data from '../../data/stats/personal';
 
 const PersonalStats = () => (
   <>
-    <h3>Some stats about me</h3>
+    <h2>Some stats about me</h2>
     <Table data={data} />
   </>
 );

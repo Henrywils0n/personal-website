@@ -22,7 +22,7 @@ const Index = () => (
     </section>
 
     <article className="post" id="index">
-      <header>
+      <header style={{ margin: '0' }}>
         <div className="title">
           <h2><Link to="/">About this site</Link></h2>
           <p>

@@ -53,32 +53,40 @@
 
 		.activities {
 			display: flex;
-		    justify-content: space-between; // Adjusts spacing between buttons
-		    align-items: center; // Vertically centers the buttons
+		    justify-content: center; // Adjusts spacing between buttons
+			align-items: center;// Vertically centers the buttons
 		    margin-top: 10px;
 		    width: 100%;
 
+			@include breakpoint(small) {
+				flex-direction: column;
+			}
+
+
 			.side-button {
-				flex: 1; // Each button takes equal space
-				margin: 0 5px;
-				padding: 4px;
+				margin: 0 5px 3px 0;
+				padding: 10px;
 				cursor: pointer;
 				transition: background-color 0.3s;
-				display: flex; // Makes the button a flex container
-				align-items: center; // Vertically centers the text
+				display: flex;
+				align-items: center;
+				text-align: center;
 			}
 
 		}
 
 		.recommender {
-			display: flex;
+			flex: 1;
 			width: 50%;
 			padding: 30px;
 			margin: 5px;
 			border: solid 1px green;
 			border-radius: 3px;/* Example margin for spacing between components */
 			text-align: center;
-			justify-content: center;
+
+			@include breakpoint(small) {
+				width: 80%;
+			}
 		}
 
 		.blurb {
@@ -111,7 +119,6 @@
 					@include vendor('justify-content', 'center');
 					border-left: 0;
 					margin: 0 0 _size(element-margin) 0;
-					padding-top: 0;
 					padding: 0;
 					text-align: left;
 					width: 100%;
