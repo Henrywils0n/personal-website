@@ -27,7 +27,7 @@ const Index = () => (
           <h2><Link to="/">About this site</Link></h2>
           <p>
             Hi, I&apos;m Henry. I am a graduate of <a href="https://www.queensu.ca/mathstat/sites/mastwww/files/uploaded_files/undergraduate/mthe/MathematicsEngineering-Brochure.pdf">Queen&apos;s University&apos;s Applied Mathematics and Engineering </a>
-            program. This website encapsulates my journey as a programmer.
+            program. This React website, the code for which can be found <a href="https://github.com/Henrywils0n/personal-website"> on my github</a>, encapsulates my journey as a programmer.
             Feel free to look around and reach out to me if you have any questions.
             It&apos;s a work in progress so go easy on it...
           </p>
