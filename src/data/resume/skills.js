@@ -15,6 +15,11 @@ const skills = [
     category: ['Web Development', 'Javascript'],
   },
   {
+    title: 'Datadog',
+    competency: 3,
+    category: ['Web Development', 'Tools'],
+  },
+  {
     title: 'React',
     competency: 3,
     category: ['Web Development', 'Javascript'],

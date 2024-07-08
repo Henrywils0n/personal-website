@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { getTrackInfoFromPlaylist } from '../../utils/spotify';
+import { getAccessToken, getPlaylist } from '../../utils/spotify';
 
 const { PUBLIC_URL } = process.env;
 
 const Spotify = () => {
+  const [bearerToken, setBearerToken] = useState(null);
   const [playlist, setPlaylist] = useState(null);
   const [randomTrack, setRandomTrack] = useState(null);
   const [selectPlaylist, setSelectPlaylist] = useState(null);
@@ -29,9 +30,12 @@ const Spotify = () => {
   };
 
   useEffect(() => {
-    getTrackInfoFromPlaylist('5oz1Md6FdhZLcpMeezKmyO').then((data) => {
-      setPlaylist(data);
-    }).catch((error) => console.error('Error fetching playlist:', error));
+    getAccessToken().then((token) => {
+      setBearerToken(token);
+      getPlaylist(token, '5oz1Md6FdhZLcpMeezKmyO').then((data) => {
+        setPlaylist(data);
+      }).catch((error) => console.error('Error fetching playlist:', error));
+    });
   }, []);
 
   useEffect(() => {
@@ -42,7 +46,7 @@ const Spotify = () => {
 
   const handleGenreChange = async (e) => {
     try {
-      getTrackInfoFromPlaylist(playlistMap[e.target.value]).then((data) => {
+      getPlaylist(bearerToken, playlistMap[e.target.value]).then((data) => {
         setSelectPlaylist(data);
       }).catch((error) => console.error('Error fetching playlist:', error));
     } catch (error) {
