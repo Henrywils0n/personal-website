@@ -17,16 +17,15 @@ async function getAccessToken() {
   return data.access_token;
 }
 
-async function getPlaylist(accessToken, playlistId) {
-  const response = await fetch(
-    `https://api.spotify.com/v1/playlists/${playlistId}`,
-    {
-      method: 'GET',
-      headers: { Authorization: `Bearer ${accessToken}` },
-    },
-  );
-  const playlist = await response.json();
-  return playlist.tracks.items.map((item) => {
+async function getPlaylist(accessToken, playlistId, nextUrl = null, accumulatedTracks = []) {
+  const url = nextUrl || `https://api.spotify.com/v1/playlists/${playlistId}/tracks`;
+  const response = await fetch(url, {
+    method: 'GET',
+    headers: { Authorization: `Bearer ${accessToken}` },
+  });
+  const data = await response.json();
+
+  const tracks = data.items.map((item) => {
     const { track } = item;
     return {
       name: track.name,
@@ -35,6 +34,15 @@ async function getPlaylist(accessToken, playlistId) {
       popularity: track.popularity,
     };
   });
+
+  // eslint-disable-next-line no-param-reassign
+  accumulatedTracks = [...accumulatedTracks, ...tracks];
+
+  if (data.next) {
+    return getPlaylist(accessToken, playlistId, data.next, accumulatedTracks);
+  }
+
+  return accumulatedTracks;
 }
 
 export { getAccessToken, getPlaylist };
