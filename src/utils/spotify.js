@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
-const clientId = '55eab5d239d44c1398e1d4966a9a8e93';
-const clientSecret = '8bd1a87eeecd4e26a31c71e100bfead3';
+const clientId = process.env.REACT_APP_S_CLIENT_ID;
+const clientSecret = process.env.REACT_APP_S_CLIENT_SECRET;
 
 async function getAccessToken() {
   const response = await fetch('https://accounts.spotify.com/api/token', {
