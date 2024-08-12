@@ -1,6 +1,17 @@
 // TODO Add a couple lines about each project
 const data = [
   {
+    title: 'PokeNet Quiz',
+    subtitle: 'Compete in a pokemon quiz game against custom AI models',
+    link: 'https://pokenetquiz.surge.sh',
+    image: '/images/projects/pokenet.png',
+    date: '2024-07-01',
+    desc:
+      'Trained custom CNN on limited data to recognize 493 different pokemon.'
+      + ' Performs with about 80% accuracy making it a pretty hard game.'
+      + ' Models are launched through a flask backend. Had to battle with ways to host this for free so it can take a little to wake up',
+  },
+  {
     title: 'Quant GAN',
     subtitle: 'Queens University Capstone Project',
     link: 'https://github.com/Henrywils0n/QuantGAN',
