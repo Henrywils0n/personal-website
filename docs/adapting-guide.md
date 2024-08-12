@@ -18,7 +18,7 @@ You may wish to fork this repository or remove my remote origin and add your own
 1. Create a `.env` file. To do this, run:
 
     ```bash
-    cp sample.env .env
+    cp .env .env
     ```
 
     and set values as appropriate. Most people will not need to modify this file.
