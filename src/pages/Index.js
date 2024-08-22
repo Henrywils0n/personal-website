@@ -21,7 +21,7 @@ const Index = () => (
       </header>
     </section>
 
-    <article className="post" id="index">
+    <article style={{ paddingBottom: '0' }} className="post" id="index">
       <header style={{ margin: '0' }}>
         <div className="title">
           <h2><Link to="/">About this site</Link></h2>
