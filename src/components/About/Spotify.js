@@ -14,7 +14,7 @@ const Spotify = () => {
     Rock: '2aBBzw32kfI6FuayPhJqO4',
     Summer: '5WAeabO3SsVhhIWLgMD52Y',
     Alternative: '1sRhFbnzhTv7RQLKGckSqg',
-    'Punk Pop': '4zbk9OFoT9PfmidYDA7mcu',
+    'Punk Rock': '4zbk9OFoT9PfmidYDA7mcu',
     'Yacht Rock': '1XzcWLbmd12wV6Q6c4zaE8',
     EDM: '1AXE9XeKp1wExSGVqhztwm',
   };
