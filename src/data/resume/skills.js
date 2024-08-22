@@ -1,12 +1,12 @@
 const skills = [
   {
     title: 'Javascript',
-    competency: 4,
+    competency: 3,
     category: ['Web Development', 'Languages', 'Javascript'],
   },
   {
     title: 'Vue.JS',
-    competency: 4,
+    competency: 3,
     category: ['Web Development', 'Javascript'],
   },
   {
@@ -26,7 +26,7 @@ const skills = [
   },
   {
     title: 'AWS',
-    competency: 2,
+    competency: 3,
     category: ['Web Development', 'Tools'],
   },
   {
@@ -36,7 +36,7 @@ const skills = [
   },
   {
     title: 'Redis',
-    competency: 2,
+    competency: 1,
     category: ['Web Development', 'Databases'],
   },
   {
@@ -56,17 +56,17 @@ const skills = [
   },
   {
     title: 'Git',
-    competency: 4,
+    competency: 3,
     category: ['Tools'],
   },
   {
     title: 'Kubernetes',
-    competency: 2,
+    competency: 1,
     category: ['Tools', 'Data Engineering'],
   },
   {
     title: 'Docker',
-    competency: 2,
+    competency: 1,
     category: ['Tools', 'Data Engineering'],
   },
   {
@@ -90,13 +90,8 @@ const skills = [
     category: ['ML Engineering', 'Python'],
   },
   {
-    title: 'Jupyter',
-    competency: 4,
-    category: ['Data Science', 'Python'],
-  },
-  {
     title: 'Typescript',
-    competency: 3,
+    competency: 2,
     category: ['Web Development', 'Languages', 'Javascript'],
   },
   {
@@ -106,12 +101,17 @@ const skills = [
   },
   {
     title: 'Python',
-    competency: 5,
+    competency: 4,
     category: ['Languages', 'Python', 'ML Engineering'],
   },
   {
     title: 'C++',
     competency: 3,
+    category: ['Languages'],
+  },
+  {
+    title: 'Java',
+    competency: 4,
     category: ['Languages'],
   },
   {
@@ -141,7 +141,7 @@ const skills = [
   },
   {
     title: 'Scikit-Learn',
-    competency: 4,
+    competency: 3,
     category: ['Data Engineering', 'ML Engineering', 'Python'],
   },
   {
