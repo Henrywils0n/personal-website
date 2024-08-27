@@ -15,7 +15,7 @@ Welcome to my [personal website](https://henrywilson.surge.sh)! This is an [MIT 
 
     ```bash
     git clone git://github.com/henrywilson/personal-website.git
-    cd personal-site
+    cd personal-website
     ```
 
 2. (Optional) Ensure you're on Node v16 or higher:
